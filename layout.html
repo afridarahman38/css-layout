@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background-color: #FD69AF ;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 400px; 
+}
+
+
+.column.side {
+  width: 15%;
+
+}
+
+
+.column.middle {
+  width: 85%;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  background-color: #5ECE1E;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="header">
+  <h2>Header</h2>
+</div>
+
+<div class="row">
+  <div class="column side" style="background-color:#EB8429;">
+
+   <h3>Navigation</h3>
+      <ol>
+          <p>Topic</p>
+          <p>Example</p> 
+          <p>References</p>
+      </ol>
+  </div>
+  <div class="column middle" style="background-color:#EBCF29;"> 
+ <h3>Content</h3>
+ <p>“Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+
+<p>CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.” </p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <h3>Footer</h3>
+</div>
+
+</body>
+</html>
